@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="static/favicon.png">
+  <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' 
+rel='stylesheet' type='text/css'>
+  <title>
+    MovieStats-Contact Us
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="static/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="static/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="static/demo/demo.css" rel="stylesheet" />
+  <link href="static/demo/cssfor_moviedetails.scss" rel="stylesheet" />
+  
+	<link rel="stylesheet" type="text/css" href="static/fonts-contacts/font-awesome-4.7.0/css/font-awesome.min.css">
+ <style>
+   
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #aaaaaa; }
+input:-moz-placeholder { color: #aaaaaa; }
+input::-moz-placeholder { color: #aaaaaa; }
+input:-ms-input-placeholder { color: #aaaaaa; }
+
+textarea::-webkit-input-placeholder { color: #aaaaaa; }
+textarea:-moz-placeholder { color: #aaaaaa; }
+textarea::-moz-placeholder { color: #aaaaaa; }
+textarea:-ms-input-placeholder { color: #aaaaaa; }
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact ]*/
+
+.bg-contact100 {
+  width: 100%;  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.container-contact100 {
+  width: 100%;  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.mb-5, .my-5 {
+    margin-bottom: 0rem !important;
+}
+
+.wrap-contact100 {
+  width: 1163px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 110px 130px 157px 148px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact100-pic {
+  width: 310px;
+  padding-top: 55px;
+}
+
+.contact100-pic img {
+  max-width: 100%;
+}
+
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact100-form {
+  width: 390px;
+}
+
+.contact100-form-title {
+  display: block;
+  font-family: Montserrat;
+  font-size: 24px;
+  color: #1d8cf8;
+  line-height: 1.2;
+  text-align: left;
+  padding-bottom: 36px;
+}
+
+input.input100 {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 50px;
+}
+
+input.input100[name="email"] {
+  padding: 0 30px 0 54px;
+}
+
+textarea.input100 {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 14px 30px;
+}
+
+/*---------------------------------------------*/
+.wrap-input100 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.input100 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+
+/*------------------------------------------------------------------
+[ Focus ]*/
+.focus-input100 {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(132,106,221, 0.5);
+}
+
+.input100:focus + .focus-input100 {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 60px 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 60px 25px;
+    opacity: 0;
+  }
+}
+
+.symbol-input100 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  pointer-events: none;
+  color: #aaaaaa;
+  font-size: 15px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100 + .symbol-input100 {
+  color: #1d8cf8;
+  padding-left: 22px;
+}
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-contact100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.contact100-form-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #1d8cf8;
+  font-family: Montserrat;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact100-form-btn:hover {
+  background:#4320bd;
+}
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 1200px) {
+  .contact100-pic {
+    width: 33.5%;
+  }
+
+  .contact100-form {
+    width: 44%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrap-contact100 {
+    padding: 110px 80px 157px 90px;
+  }
+
+  .contact100-pic {
+    width: 35%;
+  }
+
+  .contact100-form {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap-contact100 {
+    padding: 110px 80px 157px 80px;
+  }
+
+  .contact100-pic {
+    display: none;
+  }
+
+  .contact100-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap-contact100 {
+    padding: 110px 15px 157px 15px;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+
+  font-family: Montserrat-Medium;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+   </style>
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar" data="blue">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+    <div class="sidebar-wrapper" >
+      <div class="logo">
+        <a href="{{url_for('home')}}" class="simple-text logo-mini">
+          <img src="static/favicon.png">
+        </a>
+        <a href="{{url_for('home')}}" class="simple-text logo-normal">
+          MovieStats
+        </a>
+      </div>
+      <ul class="nav">
+        <li>
+          <a href="#">
+            <i class="fas fa-chart-pie"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('tweets')}}">
+            <i class="fab fa-twitter"></i>
+            <p>Tweets</p>
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('moviereviews')}}">
+            <i class="fas fa-film"></i>
+            <p>Movie Reviews</p>
+          </a>
+        </li>
+        <!--<li>
+          <a href="./notifications.html">
+            <i class="tim-icons icon-bell-55"></i>
+            <p>Notifications</p>
+          </a>
+        </li>-->
+        
+        <li class="active">
+          <a href="">
+            <i class="fa fa-envelope"></i>
+            <p>Contact Us</p>
+          </a>
+        </li>
+        <li>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+          <a href="{{url_for('home')}}">
+            <i class="material-icons" aria-hidden="true">reply</i>
+            <p>Return Home</p>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="./rtl.html">
+            <i class="tim-icons icon-world"></i>
+            <p>RTL Support</p>
+          </a>
+        </li>
+        <li class="active-pro">
+          <a href="./upgrade.html">
+            <i class="tim-icons icon-spaceship"></i>
+            <p>Upgrade to PRO</p>
+          </a>
+        </li>-->
+      </ul>
+    </div>
+    </div>
+    <div class="main-panel" data="blue">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Contact Us</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="dropdown nav-item">
+                  <div class="photo">
+                   
+                  </div>
+                  
+                
+               
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+             
+            <div class="card-body">
+              <div class="container-contact100">
+                <div class="wrap-contact100">
+                  <div class="contact100-pic js-tilt" data-tilt>
+                    <img src="static/contact.png" alt="IMG">
+                  </div>
+          
+                  <form class="contact100-form validate-form" action="contact_us" method="post">
+                    <span class="contact100-form-title">
+                      <b>Get in touch</b>
+                    </span>
+          
+                    <div class="wrap-input100 validate-input" data-validate = "Name is required">
+                      <input class="input100" type="text" name="name" placeholder="Name">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </span>
+                    </div>
+          
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                      <input class="input100" type="text" name="email" placeholder="Email">
+                      <span class="focus-input100"></span>
+                      <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </span>
+                    </div>
+          
+                    <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                      <textarea class="input100" name="message" placeholder="Message"></textarea>
+                      <span class="focus-input100"></span>
+                    </div>
+          
+                    <div class="container-contact100-form-btn">
+                      <button type="submit" class="contact100-form-btn">
+                       <b>Send</b>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="{{url_for('home')}}0" class="nav-link">
+                MovieStats
+              </a>
+              
+            </li>
+            <li class="nav-item">
+              <a href="mailto:deepshah3110@gmail.com" class="nav-link">
+                Mail
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('aboutus')}}" class="nav-link">
+                About Us
+              </a>
+            </li>
+          </ul>
+          <!--
+          <div class="copyright">
+            ©
+            <script>
+            </script>Made with <i class="fa fa-heart" style="color:red"></i> by
+            <a href="javascript:void(0)" target="https://github.com/deep-3110">Deep Shah</a>
+          </div>-->
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="static/js/core/jquery.min.js"></script>
+  <script src="static/js/core/popper.min.js"></script>
+  <script src="static/js/core/bootstrap.min.js"></script>
+  <script src="static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="static/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="static/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="static/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="static/demo/demo.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <!--===============================================================================================-->
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="static/vendor/bootstrap/js/popper.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="static/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="static/vendor/tilt/tilt.jquery.min.js"></script>
+    <script >
+      $('.js-tilt').tilt({
+        scale: 1.1
+      })
+    </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+  
+(function ($) {
+    "use strict";
+
+    
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
+
+        return check;
+    });
+
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
+
+})(jQuery);
+</script>
+
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>

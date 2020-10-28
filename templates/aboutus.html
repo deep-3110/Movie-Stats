@@ -1,0 +1,385 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+   
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Us</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="icon" type="image/png" href="static/favicon.png">
+   <!--     Fonts and icons     -->
+   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+   <!-- Nucleo Icons -->
+   <link href="static/css/nucleo-icons.css" rel="stylesheet" />
+   <!-- CSS Files -->
+   <link href="static/css/blk-design-system.css?v=1.0.0" rel="stylesheet" />
+   <!-- CSS Just for demo purpose, don't include it in your project -->
+   <link href="static/demo/demo.css" rel="stylesheet" />
+   <link rel="stylesheet" href="./static/mystyle.css">
+ </head>
+ 
+ <body class="profile-page">
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="{{url_for('home')}}" rel="tooltip" title="" data-placement="bottom" target="_blank">
+          
+          <span> Movie</span>Stats
+        </a>
+      
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a>
+                MovieStats
+              </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" title="Follow us on Linkedin" data-placement="bottom" href="https://www.linkedin.com/in/deep3110/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              <p class="d-lg-none d-xl-none">Linkedin</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <a class="nav-link" rel="tooltip" href="" title="Email Us" data-placement="bottom" target="_blank" onclick="redirect()">
+              <script>
+                  function redirect()
+{
+    window.location.href = "mailto:deepshah3110@gmail.com";
+}
+              </script>
+              <i class="material-icons">email</i>
+              <p class="d-lg-none d-xl-none">Mail</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" title="Follow us on Github" data-placement="bottom" href="https://github.com/deep-3110" target="_blank">
+              <i class="fab fa-github"></i>
+              <p class="d-lg-none d-xl-none">Github</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" rel="tooltip" title="Follow me on Instagram" data-placement="bottom" href="https://www.instagram.com/deep.shah31/" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <p class="d-lg-none d-xl-none">Instagram</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('home')}}">Back to Home</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+   <!-- End Navbar -->
+   <div class="wrapper">
+     
+    <h1 class="profile-title text-left">About Us</h1>
+     <div class="page-header">
+       <img src="static/img/dots.png" class="dots">
+       <img src="static/img/path4.png" class="path">
+       <div class="container align-items-center">
+         <div class="row">
+           <div class="col-lg-6 col-md-6">
+             <h1 class="profile-title text-left">Deep Shah</h1>
+             <h5 class="text-on-back">01</h5>
+             <p class="profile-description">I am pursuing an Undergraduate degree in Computer Engineering from Mukesh Patel School of Technology Management and Engineering,NMIMS University,Mumbai,IN. I'm a self taught Python developer .  I'm currently learning Machine Learning and Data Science Concepts. I can't wait till I get to the point where I can jump into more innovative domains of AI and put what I'm learning to good use. But for now I'm having fun learning Machine Learning and Neural Network Concepts!</p>
+             <div class="btn-wrapper profile pt-3">
+               <a target="_blank" href="https://www.linkedin.com/in/deep3110/" class="btn btn-icon btn-linkedin btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                 <i class="fab fa-linkedin"></i>
+               </a>
+               <a target="_blank" href="https://deepshah.in/" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fas fa-globe"></i>
+              </a>
+              <a target="_blank" href="mailto:deepshah3110@gmail.com" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-google"></i>
+              </a>
+              <a target="_blank" href="https://github.com/deep-3110" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                <i class="fab fa-github"></i>
+              </a>
+               <a target="_blank" href="https://www.instagram.com/deep.shah31/" class="btn btn-icon btn-instagram btn-round" data-toggle="tooltip" data-original-title="Like us">
+                 <i class="fab fa-instagram"></i>
+               </a>
+            
+               
+               
+             </div>
+           </div>
+           <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+             <div class="card card-coin card-plain">
+               <div class="card-header">
+                 <img src="static/images/profilepic.jpg" class="img-center img-fluid rounded-circle">
+                 <h4 class="title">Contribution</h4>
+               </div>
+               <div class="card-body">
+                <ul class="a">
+                  <li>Sentiment Analysis Model</li>
+                  <br>
+                  <li>Python Web Development</li>
+                  <br>
+                  <li>Web Scraping</li>
+                  <br>
+                  <li>User Interface Design</li>
+                  <br>
+                  <li>Data Analysis </li>
+                  <br>
+                  <li>Data Visualisation</li>
+                  <br>
+
+                </ul>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <br>
+     <br>
+     <div class="section">
+       <div class="container">
+         <div class="row justify-content-between">
+          <div class="container align-items-center">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <br>
+                <h1 class="profile-title text-left">Samit Shah</h1>
+                <h5 class="text-on-back">02</h5>
+                <p class="profile-description"> I am a Computer Engineering Student from Mukesh Patel School of Technology Management and Engineering,NMIMS University,Mumbai,IN. I am Microsoft Certified SQL Developer.I am also a Tabluae Certified Specialist.I can't wait till I put my skills to better use.</p> <div class="btn-wrapper profile pt-3">
+                  <a target="_blank" href="https://www.linkedin.com/in/samit-shah-7344031b5/" class="btn btn-icon btn-linkedin btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a target="_blank" href="https://www.samitshah.tk" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                   <i class="fas fa-globe"></i>
+                 </a>
+                 <a target="_blank" href="mailto:samit2001.shah@gmail.com" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                   <i class="fab fa-google"></i>
+                 </a>
+                 <a target="_blank" href="https://github.com/shahsamit" class="btn btn-icon btn-  btn-round" data-toggle="tooltip" data-original-title="Follow us">
+                   <i class="fab fa-github"></i>
+                 </a>
+                  <a target="_blank" href="https://www.instagram.com/samit_shah2001/" class="btn btn-icon btn-instagram btn-round" data-toggle="tooltip" data-original-title="Like us">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+               
+                  
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                <div class="card card-coin card-plain">
+                  <div class="card-header">
+                    <img src="static/images/samit.jpg" class="img-center img-fluid rounded-circle">
+                    <h4 class="title">Contribution</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="a">
+                      <li>Database Managemnt</li>
+                      <br>
+                      <li>HTML</li>
+                      <br>
+                      <li>CSS</li>
+                      <br>
+                      <li>Testing</li>
+                      <br>
+                      
+    
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+     <section class="section">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-6">
+             <div class="card card-plain">
+             <!-- <div class="card-header">
+                 <h1 class="profile-title text-left">Contact</h1>
+                 <h5 class="text-on-back">03</h5>
+               </div>
+               <div class="card-body">
+                 <form>
+                   <div class="row">
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <label>Your Name</label>
+                         <input type="text" class="form-control" value="Mike">
+                       </div>
+                     </div>
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <label>Email address</label>
+                         <input type="email" class="form-control" placeholder="mike@email.com">
+                       </div>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <label>Phone</label>
+                         <input type="text" class="form-control" value="001-12321345">
+                       </div>
+                     </div>
+                     <div class="col-md-6">
+                       <div class="form-group">
+                         <label>Company</label>
+                         <input type="text" class="form-control" value="CreativeTim">
+                       </div>
+                     </div>
+                   </div>
+                   <div class="row">
+                     <div class="col-md-12">
+                       <div class="form-group">
+                         <label>Message</label>
+                         <input type="text" class="form-control" placeholder="Hello there!">
+                       </div>
+                     </div>
+                   </div>-->
+                    <!-- </form>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4 ml-auto">
+             <div class="info info-horizontal">
+               <div class="icon icon-primary">
+                 <i class="tim-icons icon-square-pin"></i>
+               </div>
+               <div class="description">
+                 <h4 class="info-title">Find us at the office</h4>
+                 <p> Bld Mihail Kogalniceanu, nr. 8,
+                   <br> 7652 Bucharest,
+                   <br> Romania
+                 </p>
+               </div>
+             </div>
+             <div class="info info-horizontal">
+               <div class="icon icon-primary">
+                 <i class="tim-icons icon-mobile"></i>
+               </div>
+               <div class="description">
+                 <h4 class="info-title">Give us a ring</h4>
+                 <p> Michael Jordan
+                   <br> +40 762 321 762
+                   <br> Mon - Fri, 8:00-22:00
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+     <footer class="footer">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-3">
+             <h1 class="title">BLK•</h1>
+           </div>
+           <div class="col-md-3">
+             <ul class="nav">
+               <li class="nav-item">
+                 <a href="../index.html" class="nav-link">
+                   Home
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="../examples/landing-page.html" class="nav-link">
+                   Landing
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="../examples/register-page.html" class="nav-link">
+                   Register
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="../examples/profile-page.html" class="nav-link">
+                   Profile
+                 </a>
+               </li>
+             </ul>
+           </div>
+           <div class="col-md-3">
+             <ul class="nav">
+               <li class="nav-item">
+                 <a href="https://creative-tim.com/contact-us" class="nav-link">
+                   Contact Us
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="https://creative-tim.com/about-us" class="nav-link">
+                   About Us
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="https://creative-tim.com/blog" class="nav-link">
+                   Blog
+                 </a>
+               </li>
+               <li class="nav-item">
+                 <a href="https://opensource.org/licenses/MIT" class="nav-link">
+                   License
+                 </a>
+               </li>
+             </ul>
+           </div>
+           <div class="col-md-3">
+             <h3 class="title">Follow us:</h3>
+             <div class="btn-wrapper profile">
+               <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                 <i class="fab fa-twitter"></i>
+               </a>
+               <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
+                 <i class="fab fa-facebook-square"></i>
+               </a>
+               <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+                 <i class="fab fa-dribbble"></i>
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </footer>
+   </div>-->
+   <!--   Core JS Files   -->
+   <script src="static/js/core/jquery.min.js" type="text/javascript"></script>
+   <script src="static/js/core/popper.min.js" type="text/javascript"></script>
+   <script src="static/js/core/bootstrap.min.js" type="text/javascript"></script>
+   <script src="static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+   <script src="static/js/plugins/bootstrap-switch.js"></script>
+   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+   <script src="static/js/plugins/nouislider.min.js" type="text/javascript"></script>
+   <!-- Chart JS -->
+   <script src="static/js/plugins/chartjs.min.js"></script>
+   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+   <script src="static/js/plugins/moment.min.js"></script>
+   <script src="static/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+   <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+   <script src="static/demo/demo.js"></script>
+   <!-- Control Center for Black UI Kit: parallax effects, scripts for the example pages etc -->
+   <script src="static/js/blk-design-system.min.js?v=1.0.0" type="text/javascript"></script>
+ </body>
+ 
+ </html>
