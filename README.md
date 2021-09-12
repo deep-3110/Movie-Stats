@@ -14,7 +14,9 @@
 ## Introduction
 
 MovieStats is a real-time interactive website which provides realtime sentiment analysis of IMDB reviews and tweets of any movie user enters.
-Date Created:18-10-2020
+Project Date: 18-10-2020
+Subject: Software Engineering BTI CS NMIMS Batch 2023
+
 [Website]:(www.moviestats.ml)
 [Heroku Link](https://moviestat.herokuapp.com/)
 [Demo ](https://youtu.be/3hkWedLJ5aw)
