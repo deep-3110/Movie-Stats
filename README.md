@@ -16,11 +16,14 @@
 MovieStats is a real-time interactive website which provides realtime sentiment analysis of IMDB reviews and tweets of any movie user enters.
 Project Date: 18-10-2020
 Subject: Software Engineering BTI CS NMIMS Batch 2023
+<dl>
+  <dt>[Website]:(www.moviestats.ml)</dt>
+  <dt>[Heroku Link](https://moviestat.herokuapp.com/)</dt>
+  <dt>[Demo](https://youtu.be/3hkWedLJ5aw)</dt>
+  <dt>[Project Paper](https://ijsret.com/wp-content/uploads/2021/01/IJSRET_V7_issue1_161.pdf)</dt>
 
-[Website]:(www.moviestats.ml)
-[Heroku Link](https://moviestat.herokuapp.com/)
-[Demo ](https://youtu.be/3hkWedLJ5aw)
-[Project Paper](https://ijsret.com/wp-content/uploads/2021/01/IJSRET_V7_issue1_161.pdf)
+
+</dl>
 ## Features
 <ul>  
 <li>Sentiment Analysis Model Accuracy: 98.7%</li>  
