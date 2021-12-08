@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="static/favicon.png">
-    <title>MovieStats-Dashboard
+    <title>MovieRev-Dashboard
   </title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--     Fonts and icons     -->
@@ -363,7 +363,7 @@
             <img src="static/favicon.png">
           </a>
           <a href="{{url_for('home')}}" class="simple-text logo-normal">
-            MovieStats
+            MovieRev
           </a>
         </div>
         <ul class="nav">
@@ -385,12 +385,7 @@
               <p>Movie Reviews</p>
             </a>
           </li>
-          <!--<li>
-            <a href="./notifications.html">
-              <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
-            </a>
-          </li>-->
+         
          
           <li>
             <a href="{{ url_for('contact_us')}}">
@@ -1100,12 +1095,170 @@
           </div>
         </div>
       </div>
+      <div class="content" style="    padding: 0px 0px 30px 280px;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title">Recommended Movies</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          Title
+                        </th>
+                        <th class="">
+                          Release Date
+                        </th>
+                        <th>
+                         Rating
+                        </th>
+                       
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="http://127.0.0.1:5000/recommend?movie={{rec_title[0]}}" style="color:#1d8cf8" target="_blank">{{rec_title[0]}}</a>
+                        </td>
+                        <td>
+                          {{rec_year[0]}}
+                        </td>
+                        <td class=" ">
+                          {{rec_rating[0]}}
+                        </td>
+                   
+                      
+                      </tr>
+                      <tr>
+                   
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[1]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[1]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[1]}}
+                          </td>
+                      
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[2]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[2]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[2]}}
+                          </td>
+                      
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[3]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[3]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[3]}}
+                          </td>
+                      
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[4]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[4]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[4]}}
+                          </td>
+                        
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[5]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[5]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[5]}}
+                          </td>
+                          
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[6]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[6]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[6]}}
+                          </td>
+                          
+                      </tr>
+                      <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[7]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[7]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[7]}}
+                          </td>
+                     
+                      </tr>
+                               <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[8]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[8]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[8]}}
+                          </td>
+                        
+                      </tr>
+                               <tr>
+                          <td>
+                            <a href="" style="color:#1d8cf8" target="_blank">{{rec_title[9]}}</a>
+                          </td>
+                          <td>
+                            {{rec_year[9]}}
+                          </td>
+                          <td class=" ">
+                            {{rec_rating[9]}}
+                          </td>
+                        
+                      </tr>
+                               
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
       <footer class="footer">
         <div class="container-fluid">
           <ul class="nav">
             <li class="nav-item">
               <a href="{{url_for('home')}}" class="nav-link">
-                MovieStats
+                MovieRev
               </a>
               
             </li>

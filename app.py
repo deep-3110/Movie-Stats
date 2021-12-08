@@ -26,6 +26,10 @@ from textblob import TextBlob
 import numpy as np
 import smtplib
 from email.message import EmailMessage
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import string
 ################ IMPORTING MODULES ENDS ############################
 #------------------------------------------------------------------#
 ################ GLOBAL VARIABLES DECLARATION STARTS ################
@@ -228,10 +232,40 @@ def write_to_csv(name,email,message):
             smtp.send_message(email)
             print('--Sent Mail--')
 
+
+
+
+
+def get_recommendation(title):
+    title=title.lower()
+    title= title. capitalize()
+    movie_dataframe = pd.read_csv(r'C:\Users\deeps\Desktop\MovieStats\dataset\tmdb.csv')
+    count = CountVectorizer(stop_words='english')
+    count_matrix = count.fit_transform(movie_dataframe['soup'])
+    cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
+    movie_dataframe = movie_dataframe.reset_index()
+    indices = pd.Series(movie_dataframe.index, index=movie_dataframe['title'])
+    all_titles = [movie_dataframe['title'][i] for i in range(len(movie_dataframe['title']))]
+    cosine_sim = cosine_similarity(count_matrix, count_matrix)
+    idx = indices[title]
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    sim_scores = sim_scores[1:11]
+    movie_indices = [i[0] for i in sim_scores]
+    titl = movie_dataframe['title'].iloc[movie_indices]
+    dat = movie_dataframe['release_date'].iloc[movie_indices]
+    overview=movie_dataframe['overview'].iloc[movie_indices]
+    voting=movie_dataframe['vote_average'].iloc[movie_indices]
+    return_df = pd.DataFrame(columns=['Title', 'Year','Overview','Rating'])
+    return_df['Title'] = titl
+    return_df['Year'] = dat
+    return_df['Overview']=overview
+    return_df['Rating']=voting
+    return return_df
 ############################################## FLASK SECTION #####################################################
 app = Flask(__name__)
 
-############################################## / - home.html ######################################
+##############################################  home.html ######################################
 @app.route("/")
 def home():
     print("--Entered Home--")
@@ -242,7 +276,6 @@ def home():
 ############################################## RECOMMENDATION - Dashboard.html ######################################
 @app.route("/recommend")
 def recommend():
-    
     print("--Entered the Recommend Section--")
     global movie
     movie = request.args.get('movie') # get movie name from the URL
@@ -400,9 +433,25 @@ def recommend():
         print(tweet['text'])  """
     rating=get_movie_rating(imdb_id)
     dash=calculate_dassh_offset_rating(int(rating))
+
+    ## RECOMMENDER SYSTEM ##
+    df=get_recommendation(movie)
+    rec_title=df['Title'].values.tolist()
+    rec_year=df['Year'].values.tolist()
+    rec_rating=df['Rating'].values.tolist()
+    rec_overview=df['Overview'].values.tolist()
+    ## END RECOMMENDER SYSTEM ##
+
+
+
+
+
     return render_template('dashboard.html',movie=movie,mtitle=r,t='l',rating=rating,dash_offset=dash,
             result=result[0],reviews=movie_reviews,img_path=img_path,genres=genre,vote_count=vote_count,
-      runtime=runtime,director=director,year=year,imdblink=imdblink,value=value,review=review_str,user=user,user_profile_pic=user_prof,location=loc,time=time1,text=text,tweet_id=tweet_id,reviews_list=reviews_list_dash,positive_tweet_count=positive_tweet_count,neutral_tweet_count=neutral_tweet_count,negative_tweet_count=negative_tweet_count,tweet=tweets)
+      runtime=runtime,director=director,year=year,imdblink=imdblink,value=value,review=review_str,user=user,
+      user_profile_pic=user_prof,location=loc,time=time1,text=text,tweet_id=tweet_id,reviews_list=reviews_list_dash,
+      positive_tweet_count=positive_tweet_count,neutral_tweet_count=neutral_tweet_count,negative_tweet_count=negative_tweet_count,
+      tweet=tweets, rec_title=rec_title, rec_year=rec_year, rec_rating=rec_rating, rec_overview=rec_overview)
 
 ############################################## /contact_us- contactus.html ######################################
 @app.route('/contact_us',methods=['POST','GET'])
@@ -447,6 +496,7 @@ def moviereviews():
 
 
 
+
 ############################################## /aboutus.html- aboutus.html ######################################
 @app.route('/aboutus.html')
 def aboutus():
@@ -464,5 +514,7 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     app.jinja_env.cache = {}
+    app.debug = True
+    app.config["CACHE_TYPE"] = "null"
     app.run(threaded=True)
     app.run(debug=True)

@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="static/favicon.png">
+  <title>
+     MovieRev-Movie Reviews
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="static/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="static/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="static/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar" data="blue">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+    <div class="sidebar-wrapper" >
+      <div class="logo">
+        <a href="{{url_for('home')}}" class="simple-text logo-mini">
+          <img src="static/favicon.png">
+        </a>
+        <a href="{{url_for('home')}}" class="simple-text logo-normal">
+           MovieRev
+        </a>
+      </div>
+      <ul class="nav">
+        <li >
+          <a href="#">
+            <i class="fas fa-chart-pie"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('tweets')}}">
+            <i class="fab fa-twitter"></i>
+            <p>Tweets</p>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <i class="fas fa-film"></i>
+            <p>Movie Reviews</p>
+          </a>
+        </li>
+        <!--<li>
+          <a href="./notifications.html">
+            <i class="tim-icons icon-bell-55"></i>
+            <p>Notifications</p>
+          </a>
+        </li>-->
+       
+        <li>
+          <a href="{{ url_for('contact_us')}}">
+            <i class="fa fa-envelope"></i>
+            <p>Contact Us</p>
+          </a>
+        </li>
+        <li>
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+          <a href="{{url_for('home')}}">
+            <i class="material-icons" aria-hidden="true">reply</i>
+            <p>Return Home</p>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="./rtl.html">
+            <i class="tim-icons icon-world"></i>
+            <p>RTL Support</p>
+          </a>
+        </li>
+        <li class="active-pro">
+          <a href="./upgrade.html">
+            <i class="tim-icons icon-spaceship"></i>
+            <p>Upgrade to PRO</p>
+          </a>
+        </li>-->
+      </ul>
+    </div>
+    </div>
+    <div class="main-panel" data="blue">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Movie Reviews</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="dropdown nav-item">
+                  <div class="photo">
+                   
+                  </div>
+                  
+                
+               
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header">
+                <h4 class="card-title">Movie Reviews</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th>
+                          User
+                        </th>
+                        <th>
+                          Review
+                        </th>
+                        <th class="text-center">
+                          Date
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="https://www.imdb.com/user/{{author[0]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[0]}}</a>
+                        </td>
+                        <td>
+                          {{content[0]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[0]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[1]}}/?ref_=tt_urv " style="color:#1d8cf8" target="_blank">{{author[1]}}</a>
+                        </td>
+                        <td>
+                          {{content[1]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[1]}}
+                        </td>
+                      </tr><tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[2]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[2]}}</a>
+                        </td>
+                        <td>
+                          {{content[2]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[2]}}
+                        </td>
+                      </tr><tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[3]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[3]}}</a>
+                        </td>
+                        <td>
+                          {{content[3]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[3]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[4]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[4]}}</a>
+                        </td>
+                        <td>
+                          {{content[4]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[4]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[5]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[5]}}</a>
+                        </td>
+                        <td>
+                          {{content[5]}}
+                        </td>
+                        <td class="text-center">
+                          {{date[5]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[6]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[6]}}</a>
+                        </td>
+                        <td>
+                          {{content[6]}}
+                        </td>
+                       
+                        <td class="text-center">
+                          {{date[6]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[7]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[7]}}</a>
+                        </td>
+                        <td>
+                          {{content[7]}}
+                        </td>
+                       
+                        <td class="text-center">
+                          {{date[7]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[8]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[8]}}</a>
+                        </td>
+                        <td>
+                          {{content[8]}}
+                        </td>
+                       
+                        <td class="text-center">
+                          {{date[8]}}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          <a href="https://www.imdb.com/user/{{author[9]}}/?ref_=tt_urv" style="color:#1d8cf8" target="_blank">{{author[9]}}</a>
+                        </td>
+                        <td>
+                          {{content[9]}}
+                        </td>
+                       
+                        <td class="text-center">
+                          {{date[9]}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="{{url_for('home')}}" class="nav-link">
+                 MovieRev
+              </a>
+              
+            </li>
+            <li class="nav-item">
+              <a href="mailto:deepshah3110@gmail.com" class="nav-link">
+                Mail
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('aboutus')}}" class="nav-link">
+                About Us
+              </a>
+            </li>
+          </ul>
+          <!--
+          <div class="copyright">
+            ©
+            <script>
+            </script>Made with <i class="fa fa-heart" style="color:red"></i> by
+            <a href="javascript:void(0)" target="https://github.com/deep-3110">Deep Shah</a>
+          </div>-->
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="static/js/core/jquery.min.js"></script>
+  <script src="static/js/core/popper.min.js"></script>
+  <script src="static/js/core/bootstrap.min.js"></script>
+  <script src="static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="static/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="static/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="static/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="static/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>
